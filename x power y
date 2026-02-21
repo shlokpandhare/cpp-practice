@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long x, y;
+    cin >> x >> y;
+
+    long long result = 1;
+    while (y > 0) {
+        result *= x;
+        y--;
+    }
+
+    cout << result;
+    return 0;
+}
