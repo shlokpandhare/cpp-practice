@@ -1,0 +1,11 @@
+#include <iostream>
+
+int main() {
+    int marks;
+    std::cin >> marks;
+    if(marks>50)
+    std::cout<<"PASS";
+    else 
+    std::cout<<"FAIL";
+    return 0;
+}
