@@ -9,7 +9,7 @@ int main() {
     s.insert(30);
     s.insert(10);
     s.insert(20);
-    s.insert(10);   // duplicate ignored
+    s.insert(10);  
 
     cout << "Set elements (sorted & unique): ";
     for(set<int>::iterator it = s.begin(); it != s.end(); it++)
