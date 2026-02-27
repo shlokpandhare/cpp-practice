@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-vector<int> v; // declaration of vector
+vector<int> v;
 int n,x,i,y;
 cout << "Enter no of elements:";
 cin >> n;
@@ -11,7 +11,7 @@ for (i=0; i<n; i++)
 {
 cout << "Enter element " << i+1 << endl;
 cin >> x;
-v.push_back(x);  // inserts the element into vector
+v.push_back(x);
 }
 cout << " Enter position:";
 cin >> y;
