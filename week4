@@ -2,24 +2,20 @@
 #include <iostream>
 using namespace std;
 
-// Node structure (ADT representation)
 struct Node {
     int data;
     Node* next;
 };
 
-// Linked List ADT Class
 class SinglyLinkedList {
 private:
     Node* head;
 
 public:
-    // Constructor (Initialize list)
     SinglyLinkedList() {
         head = NULL;
     }
 
-    // Insert at Beginning
     void insertBeginning(int value) {
         Node* newNode = new Node;
         newNode->data = value;
@@ -28,7 +24,6 @@ public:
         cout << "Inserted at Beginning Successfully\n";
     }
 
-    // Insert at End
     void insertEnd(int value) {
         Node* newNode = new Node;
         newNode->data = value;
