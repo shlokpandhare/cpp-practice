@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int T, M, N;
+    cin >> T >> M >> N;
+    int sum=0;
+    for(int i=M;i<=N;i++){
+        if(i%T == 0){
+            sum = sum + i;
+        }
+    }
+cout << sum;
+    return 0;
+}
