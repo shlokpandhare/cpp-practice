@@ -1,0 +1,102 @@
+#include <iostream>
+using namespace std;
+#define n 5
+class Stack{
+    private:
+        int top;
+
+        
+    public:
+            int st[n];
+        Stack(){
+            top = -1;
+        }
+        
+            void push(int value){
+                if(isFull()){
+                    cout << "Stack overflow" << endl;
+                    return;
+                }
+                top++;
+                st[top] = value;
+                cout << "Element Pushed" << endl;
+                return;
+            }
+            
+            void pop(){
+                if (isEmpty()){
+                    cout << "Stack underflow" << endl;
+                    return;
+                }
+                cout << "Popped element" << st[top] << endl;
+                top--;
+                return;
+            }
+            
+            void peek(){
+                        if(isEmpty()){
+                        cout << "Stack Underflow" << endl;
+                        return;
+                        }
+            cout << "Top element: " << st[top] << endl;
+            }
+            
+            bool isFull(){
+                if(top == n-1)
+                return true;
+                else
+                return false;
+            }
+
+            bool isEmpty(){
+                if(top == -1)
+                return true;
+                else
+                return false;
+            }
+                
+                void display(){
+                                if(isEmpty()){
+                                cout << "Stack Underflow" << endl;
+                                return;
+                            }
+
+                                cout << "Stack elements are: ";
+                                for(int i = top; i >= 0; i--){
+                                cout << st[i] << " ";
+                                }
+                cout << endl;
+                }
+            };
+
+int main(){
+int op;
+Stack s;
+
+    do{
+        cout << "1.Push"<<endl<< "2.Pop"<<endl<< "3.Peek"<<endl<< "4.isFull"<<endl<< "5.isEmpty"<<endl<< "6.Display"<<endl<< "7.Exit"<<endl;
+        cin >> op;
+
+switch(op){
+            case 1:{
+    int a;
+    cout << "Enter value to push: ";
+    cin >> a;
+    s.push(a);
+    break;
+}
+    case 2:s.pop();
+            break;
+    case 3:s.peek();
+            break;
+    case 4:cout << (s.isFull() ? "Stack is Full" : "Stack is not Full") << endl;
+           break;
+    case 5:cout << (s.isEmpty() ? "Stack is Empty" : "Stack is not Empty") <<endl;
+           break;
+    case 6:s.display();
+            break;
+    case 7: break;
+    default : cout<<"Invalid Choice" << endl;
+    }
+}while(op!=7);
+}
